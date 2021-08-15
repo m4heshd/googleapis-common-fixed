@@ -14,6 +14,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isBrowser = void 0;
 function isBrowser() {
+    if (process && process.type) return false;
     return typeof window !== 'undefined';
 }
 exports.isBrowser = isBrowser;
